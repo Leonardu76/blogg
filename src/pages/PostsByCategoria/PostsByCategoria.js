@@ -70,17 +70,9 @@ const PostsByCategoria = () => {
     <div className='cardBottom'>   
             <p className='card-bottom-calendar'><FaCalendarAlt/><b>{post.created_at} </b></p></div>
      </div>
-            
+        
               )
-             )}  
-
-
-
-
-
-
-                    
-
+             )} 
 
         </div>
       
