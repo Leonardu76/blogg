@@ -5,6 +5,7 @@ import { FaCalendarAlt } from 'react-icons/fa';
 import {useEffect} from 'react'
 import  { useState } from 'react'
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
@@ -63,8 +64,10 @@ const PostsByCategoria = () => {
 
  <img className='imgPost' src={post.image} alt="" />
     <p className='contentPost'>{post.conteudo}.</p>
-  
-    <button className='btnOpen'>Ler</button>
+
+    <Link to={"/post/" + post.id} > 
+
+    <button className='btnOpen'>Ler</button></Link>
     <hr />
     </div>
     <div className='cardBottom'>   

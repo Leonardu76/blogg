@@ -3,10 +3,6 @@ width: 450px;
 margin-left: 800px;
 box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
 
-
-
-
-/* margin-left: 900px; */
 }
 .sider{
     height: 0;
@@ -26,4 +22,12 @@ box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
 
 .card-body ul li{
     text-transform: uppercase;
+}
+
+
+/* CARD SIDE PAGE POST */
+
+.card-side-post{
+ width: 40%;
+ margin-left: 890px;
 }

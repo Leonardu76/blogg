@@ -6,7 +6,9 @@ import { Link } from "react-router-dom"
 
 
 
-const Side = () => {
+const Side = (props) => {
+   const { page } = props
+
     const [data, setData] = useState([])
     const [, setError] = useState()
 
@@ -40,14 +42,18 @@ const Side = () => {
 
     return (
         <div>
-        <div className='card-side'>
+        <div className={page === 'post' ? ('card-side card-side-post') :
+       ('card-side') 
+    }
+        
+        >
         <div className='card-topo'>
                 <h3 className='card-titulo'>CATEGORIAS</h3>
                 </div>
         {Object.values(data).map(categoria => (
 
 <>
-<Link to={"/Posts/" + categoria.id} >
+<Link to={"/categoria/" + categoria.id} >
 
 
                 <div className='card-body'> 

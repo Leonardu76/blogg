@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/navbar/navbar'
 import Side from '../../components/side/side'
+import { Link } from "react-router-dom"
 
 import './home.css'
 import { FaCalendarAlt } from 'react-icons/fa';
@@ -66,8 +67,9 @@ const home = () => {
          <img className='imgPost' src={post.image} alt="" />
             <p className='contentPost'>{post.conteudo}.</p>
           
-            <button className='btnOpen'>Ler</button>
-            <hr />
+            <Link to={"/post/" + post.id} > 
+
+<button className='btnOpen'>Ler</button></Link>            <hr />
             </div>
             <div className='cardBottom'>   
                     <p className='card-bottom-calendar'><FaCalendarAlt/><b>{post.created_at} </b></p></div>
