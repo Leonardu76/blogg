@@ -5,34 +5,18 @@ import { FaCalendarAlt } from 'react-icons/fa';
 import {useEffect} from 'react'
 import  { useState } from 'react'
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
 const PostsByCategoria = () => {
     const [categoria, setCategoria] = useState([])
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
     const [postagens, setPostagens] = useState([])
-    const [error, setError] = useState()
+    const [, setError] = useState()
     const { id } = useParams()
 
-    // const [nome, setNome] = useState()
 
-
-    // const GetId  = async e =>{
-
-    //     e.preventDefault()
-    
-    //    let reqs =  await fetch("https://bloggphp.herokuapp.com/showPosts.php", {
-    //       method: 'POST',
-    //       headers: {
-    //     'Content-Type': 'application/json'
-    //       },
-    //       body: JSON.stringify({id})
-    //     })
-    //     const ret = await reqs.json();
-    //     console.log(ret)
-
-    // }
 
     const GetPostsByCat  = async () => {
     
@@ -61,16 +45,6 @@ const PostsByCategoria = () => {
 
     const url = 'home'
 
-//    
-// const Postagens = () => {
-
-//     Object.values(categoria).map(post => (
-//         setPostagens(post)
-//     ))
-//     return postagens
-// }
-// {console.log(Postagens())}
-
     return (
         <div>
             <Navbar  url={url}/>
@@ -90,24 +64,18 @@ const PostsByCategoria = () => {
 
  <img className='imgPost' src={post.image} alt="" />
     <p className='contentPost'>{post.conteudo}.</p>
-  
-    <button className='btnOpen'>Ler</button>
+
+    <Link to={"/post/" + post.id} > 
+
+    <button className='btnOpen'>Ler</button></Link>
     <hr />
     </div>
     <div className='cardBottom'>   
             <p className='card-bottom-calendar'><FaCalendarAlt/><b>{post.created_at} </b></p></div>
      </div>
-            
+        
               )
-             )}  
-
-
-
-
-
-
-                    
-
+             )} 
 
         </div>
       
