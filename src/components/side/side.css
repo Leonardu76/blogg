@@ -1,5 +1,5 @@
 .card-side{
-width: 450px;
+width: 430px;
 margin-left: 800px;
 box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
 
@@ -10,20 +10,33 @@ box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
 .card-topo{
     background-color:  rgb(0, 165, 115);
     color: rgb(255, 255, 255);
-    padding-left: 35px;
-    text-align: start;
 }
 
-.card-body ul{
-    text-align: start;
+.card-body{
+    text-align: center;
     color: rgb(0, 165, 115);
-    list-style: none;
 }
 
-.card-body ul li{
+.card-body:hover{
+    color: white;
+    background-color: rgb(0, 165, 115);
+    font-size:19px;
+}
+
+a {
+    text-decoration: none;
+}
+hr, h3{
+    margin: 4px;
+}
+.card-body p{
+    margin-top: 0px;
     text-transform: uppercase;
 }
+.card-titulo{
+    text-align: center;
 
+}
 
 /* CARD SIDE PAGE POST */
 
