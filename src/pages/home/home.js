@@ -43,7 +43,7 @@ const home = () => {
     return (
         <div>
             <Navbar  url={url}/>
-            <h1 className='title'>Blog</h1>
+            <h1 className='title'>Todas publicações</h1>
 
         <div className='post-div'>
               <aside className='sider'>
@@ -69,7 +69,7 @@ const home = () => {
           
             <Link to={"/post/" + post.id} > 
 
-<button className='btnOpen'>Ler</button></Link>            <hr />
+<button className='btnOpen'>Ver conteúdo</button></Link>            <hr />
             </div>
             <div className='cardBottom'>   
                     <p className='card-bottom-calendar'><FaCalendarAlt/><b>{post.created_at} </b></p></div>
