@@ -57,14 +57,9 @@ const Side = (props) => {
 
 
                 <div className='card-body'> 
-                <ul>
                     
-                      <li>{categoria.categoria}</li>
+                      <p>{categoria.categoria}</p>
                       <hr /> 
-                      
-
-                     
-                      </ul>
                     </div>
 
                     <div className='card-bottom'>

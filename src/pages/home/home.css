@@ -28,23 +28,29 @@ body{
 
 }
 .posts{
-
     box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
     text-align: start;
     width: 750px;
     font-size: larger;
     margin-bottom:40px;
-
+    cursor: pointer;
 }
-
+.posts:hover{
+    filter: brightness(128%);
+}
 .btnOpen{
-    margin-left: 320px;
+    margin-left: 300px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 165, 115);
-    border: none;
-    width: 100px;
+    width: 170px;
     height: 30px;
     cursor: pointer;
+}
+.btnOpen:hover{
+   
+    color: rgb(0, 165, 115);
+    background-color: rgb(255, 255, 255);
+
 }
 
 .cardTop{
