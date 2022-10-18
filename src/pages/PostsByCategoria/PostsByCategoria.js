@@ -48,11 +48,11 @@ const PostsByCategoria = () => {
     return (
         <div>
             <Navbar  url={url}/>
-            <h1 className='title'>Posts da categoria:{categoria}</h1>
+            <h1 className='title'>categoria:{categoria}</h1>
 
                      {Object.values(postagens).map(post => (
 
-<div className='posts'>
+<div className='posts-cat posts'>
 
 <div className='cardTop'>
     <b className='card-top-titulo'>{post.titulo}</b> 

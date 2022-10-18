@@ -50,9 +50,12 @@ const Side = (props) => {
         <div className='card-topo'>
                 <h3 className='card-titulo'>CATEGORIAS</h3>
                 </div>
+                <hr /> 
+
         {Object.values(data).map(categoria => (
 
 <>
+
 <Link to={"/categoria/" + categoria.id} >
 
 

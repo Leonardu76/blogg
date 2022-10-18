@@ -5,7 +5,7 @@
 .post-top-titulo{
     text-transform: uppercase;
     margin-top: -10px;
-    color: rgb(0, 165, 115);;
+    color: rgb(255, 255, 255);
 }
 .post{
 margin-top: 41px;
@@ -18,7 +18,9 @@ margin-left: 40px;
 
 .post-content{
     text-align: start;
-    word-wrap: break-word;}
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+}
 /* .post-top-autor{
 float: right;
 } */
@@ -32,12 +34,18 @@ margin-top: 5px;
 }
 
 .post-top-autor, .post-bottom-calendar{
-    color: black;
-    background-color: rgb(0, 165, 115);
+    border: solid 2px white;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-decoration:wavy;
     border-radius: 5px;
     padding: 3px;
+    cursor: pointer;
+} 
+.post-top-autor:hover{
+    border: solid 2px white;
+    color: black;
+    background-color:rgb(255, 255, 255); ;
 
 } 
 .post-top-autor {

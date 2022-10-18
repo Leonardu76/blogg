@@ -1,0 +1,14 @@
+.posts-cat{
+    margin-left: 150px;
+    width: 80%;
+}
+
+.posts-cat:hover{
+
+    filter: brightness(128%);
+    animation: bounce 3s;
+
+    margin-left: 100px;
+    transition-duration:  2s;
+    width: 90%;
+}
