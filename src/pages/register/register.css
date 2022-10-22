@@ -1,6 +1,10 @@
+.register-div{
+    margin-top: 70px;
 
+}
 .registerBackground
 {
+    
     height: 100vh;
     display: flex;
     flex-direction: column;

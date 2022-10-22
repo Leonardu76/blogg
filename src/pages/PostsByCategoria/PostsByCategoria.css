@@ -1,14 +1,23 @@
-.posts-cat{
-    margin-left: 150px;
-    width: 80%;
+
+.btnOpenByCat{
+    margin-left: 450px;
 }
 
 .posts-cat:hover{
 
     filter: brightness(128%);
     animation: bounce 3s;
-
-    margin-left: 100px;
     transition-duration:  2s;
     width: 90%;
+}
+.content-post{
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+}
+.title-cat{
+    margin-top: 50px;
+    margin-bottom: 50px;
+
 }

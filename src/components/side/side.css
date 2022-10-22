@@ -5,41 +5,35 @@
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
+    margin-bottom: 10px;
+
 }
 .card-titulo{
     font-size: 21px;
     text-align: center;
-    
 }
 
 .card-body {
     padding-top: 5px;
     text-align: center;
-    
+}
 
-    
-}
-.card-body:hover{
-    background-color: rgba(255, 255, 255, 0.993);
-}
 
 .categoria:hover{
+    background-color: white;
     color: black;
     font-weight: bold;
     font-size:20px;
 
 }
 .categoria{
-    border: groove 2px  white ;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    text-decoration: none;
+
     text-align: center;
-    margin-top: 0px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.993);
+    margin-bottom: 3px;
+    padding-bottom: 10px;
 }
 .card-side{
     margin-left: 800px;
@@ -56,20 +50,7 @@ hr, h3{
 
 
 
-/* CARD SIDE PAGE POST */
 
-
-
-/* @media screen and (max-width: 1100px)  and (min-width: 320px) {
-    .card-side, .sider{
-        height: 0;
-        width: 50%;
-        margin-left: 65%;
-
-    
-    }
-
-} */
 input[type=checkbox]{
     display: none;
 } 
@@ -102,7 +83,10 @@ input[type=checkbox]{
       
     input[id="checkbox_toggle_cat"]:checked ~ .menu-cat{
         display: block;
-        
+    }
+    .sider{
+        margin-bottom: 100px;
+
     }
     .hamburger-cat {
         display: block;

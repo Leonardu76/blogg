@@ -34,7 +34,7 @@ const Register = () => {
   }
 
   const onButtonClickHandler = async e =>{
-    console.log(nome, email, senha)
+    // console.log(nome, email, senha)
     e.preventDefault()
 
     await fetch("https://bloggphp.herokuapp.com/cadastrar.php/", {

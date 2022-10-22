@@ -1,3 +1,53 @@
-.teste{
+.user-name{
     color: red;
+    text-transform: uppercase;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.user-details{
+    margin-left: 700px;
+    background-color: aqua;
+}
+.user-image{
+    background-color: red;
+    border-radius: 40px;
+    width: 50px;
+    flex-direction: column;
+}
+
+.user-email{
+    color: red;
+    word-wrap: break-word;
+
+}
+.user-card-footer{
+    margin-top: 5px;
+    background-color:rgb(247, 244, 250);
+}
+.user-rede{
+ font-size: 22px;
+ margin-left: 10px;
+}
+.face, .twitter{
+    color: rgb(38, 8, 212);
+}
+.insta, .twich{
+    color: blueviolet;
+}
+
+
+@media (max-width: 768px) {
+   
+  
+    .user-details{
+        margin-left: unset;
+        margin-bottom: 100px;
+        height: 250px;
+    }
+    .post-top-titulo{
+        margin-top:350px;
+    }
+
+     
 }
