@@ -61,7 +61,7 @@ const Side = () => {
 
                 <div className='card-body' > 
                     <p className='categoria' >{categoria.categoria}</p>
-                    <hr /> 
+                    {/* <hr/>  */}
                 </div>
 
                     <div className='card-bottom'>

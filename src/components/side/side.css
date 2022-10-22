@@ -1,14 +1,22 @@
 .card-topo{
     background-color:   rgb(255, 255, 255);
     color: black(255, 255, 255);
+    border: groove 2px  white ;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 .card-titulo{
     font-size: 21px;
     text-align: center;
+    
 }
 
-.card-body{
+.card-body {
     padding-top: 5px;
+    text-align: center;
+    
+
     
 }
 .card-body:hover{
@@ -22,6 +30,10 @@
 
 }
 .categoria{
+    border: groove 2px  white ;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     text-decoration: none;
     text-align: center;
     margin-top: 0px;
@@ -32,6 +44,7 @@
 .card-side{
     margin-left: 800px;
     box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
+    
    }
 
 .sider{
