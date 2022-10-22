@@ -11,8 +11,8 @@ const Login = () => {
   const url = 'login'
   const [data] = useState([])
   
-  const [email, setEmail] = useState()
-  const [senha, setSenha] = useState()
+  // const [email, setEmail] = useState()
+  // const [senha, setSenha] = useState()
   // const [status, setStatus] = useState({
   //   type: '',
   //   mensagem: ''
@@ -21,13 +21,13 @@ const Login = () => {
   const GetUser  = async e =>{
     e.preventDefault()
 
-   let reqs =  await fetch("https://blogg-api.000webhostapp.com/login.php", {
-      method: 'POST',
-      headers: {
-    'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({email, senha})
-    })
+  //  let reqs =  await fetch("https://blogg-api.000webhostapp.com/login.php", {
+  //     method: 'POST',
+  //     headers: {
+  //   'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({email, senha})
+  //   })
     // const ret = await reqs.json();
     // console.log(ret)
 
