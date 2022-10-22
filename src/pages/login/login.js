@@ -29,7 +29,7 @@ const Login = () => {
       body: JSON.stringify({email, senha})
     })
     const ret = await reqs.json();
-    console.log(ret)
+    // console.log(ret)
 
     // .then((response) =>response.json())
     // .then((responseJson) => {

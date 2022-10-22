@@ -4,54 +4,34 @@ import {useEffect} from 'react'
 import  { useState } from 'react'
 import { Link } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.css';
-
-
+import {GetCategorias} from '../../components/api/Api'
 
 const Side = () => {
 
     const [data, setData] = useState([])
-    const [, setError] = useState()
+    const Categorias = async () => {
 
-    const GetCategorias  = async () => {
+        try {
+          const result = await GetCategorias()
+          setData(result)
     
-      fetch("https://lavapi.000webhostapp.com/api/categorias")
-      .then(response => {
-          if (response.ok) {
-              return response.json()
-      }
-          throw response;
-      })
-       .then(data => {
-          setData(data)
-       })
-      .catch(error => {
-          console.error("Error fetcj data: ", error)
-          setError(error);
-       } ) 
-            
-          
+        } catch (error) {
           
         }
+    }
 
    useEffect(() => {
-    GetCategorias();
+    Categorias();
       },[])
-
-
-
 
     return (
         <div className='container'>
- <input type="checkbox" value="1" id="checkbox_toggle_cat" />
- <label for="checkbox_toggle_cat" class="hamburger-cat">&#9776;</label>
-        <div className= "card-side col-md-5 menu-cat " 
-    
-        
-        >
+        <input type="checkbox" value="1" id="checkbox_toggle_cat" />
+        <label htmlFor="checkbox_toggle_cat" className="hamburger-cat">&#9776;</label>
+        <div className= "card-side col-md-5 menu-cat ">
         <div className='card-topo'>
-                <h4 className='card-titulo'>CATEGORIAS</h4>
+        <h4 className='card-titulo'>CATEGORIAS</h4>
         </div>
-        <hr /> 
 
         {Object.values(data).map(categoria => (
 
@@ -61,7 +41,6 @@ const Side = () => {
 
                 <div className='card-body' > 
                     <p className='categoria' >{categoria.categoria}</p>
-                    {/* <hr/>  */}
                 </div>
 
                     <div className='card-bottom'>

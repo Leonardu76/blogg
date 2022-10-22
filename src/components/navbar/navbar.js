@@ -14,15 +14,12 @@ const Navbar = (props) => {
   return (
     <div>    
 
-<nav class="navbar">
- {/* <!-- LOGO --> */}
+<nav className="navbar">
  <Link to='/'> <img className='logo' src="https://play-lh.googleusercontent.com/cWG9-bk2_zLdKsN9vsYEdbCReVfzgXU6FeHUmLI8a24FoZ05TpOLYXInCQ278FTwCw" alt="" />
-  </Link> {/* <!-- NAVEGAÇÃO MENU --> */}
- <div class="nav-links">
- {/* <!-- CHECKBOX HACK --> */}
+  </Link>
+ <div className="nav-links">
+ <label  htmlFor="checkbox_toggle_nav" className="hamburger">&#9776;</label>
  <input type="checkbox" id="checkbox_toggle_nav" />
- <label for="checkbox_toggle_nav" class="hamburger">&#9776;</label>
- {/* <!-- NAVEGAÇÃO MENUS --> */}
  <div className={url === 'register' ? ('navbarRegister menu') :
       url === 'login' ? ('navbarLogin menu') :
         url === 'home' ? ('navbarHome menu') : null
@@ -48,7 +45,7 @@ const Navbar = (props) => {
                <Link to='/register' >  <button className='NewsBtn'> <b>Registrar-se</b></button></Link>
               <div className='searchDiv'>
                 <input className='srchInput' type="text" placeholder='Pesquise aqui' />
-                <button className='btnSrch'><FaSearch /></button>
+                <button   className='btnSrch'><FaSearch /></button>
               </div>
 
             </div>

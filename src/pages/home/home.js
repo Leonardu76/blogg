@@ -6,36 +6,23 @@ import './home.css'
 import { FaCalendarAlt } from 'react-icons/fa';
 import {useEffect} from 'react'
 import  { useState } from 'react'
-
-
-
-
+import {GetPosts} from '../../components/api/Api'
 
 const Home = () => {
     const [data, setData] = useState([])
-    const [, setError] = useState()
 
-    const GetPosts  = async () => {
-    
-    
-        fetch("https://lavapi.000webhostapp.com/api/posts")
-        .then(response => {
-            if (response.ok) {
-                return response.json()
+    const Posts = async () => 
+    {
+        try {
+          const result = await GetPosts()
+          setData(result)
+        } catch (error) {
+            
         }
-            throw response;
-        })
-         .then(data => {
-            setData(data)
-         })
-        .catch(error => {
-            console.error("Error fetcj data: ", error)
-            setError(error);
-         } ) 
-        }
+    }
 
    useEffect(() => {
-    GetPosts();
+    Posts();
       },[])
 
     const url = 'home'
@@ -44,9 +31,9 @@ const Home = () => {
     return (
         <div >
             <Navbar  url={url}/>
-            <div className='container'>
+            <div className=' post-div container'>
         <h1 className='title'>Todas publicações</h1>
-        <div className='post-div col-md-8'>
+        <div className=' col-md-8'>
         <aside className='sider'>
  
          <Side/>
@@ -62,9 +49,9 @@ const Home = () => {
             <b className='card-top-autor'>De: {post.autor}</b>
         </div>
 
-        <div className='cardBody'> 
+        <div className='card-body'> 
 
-         <img className='imgPost img-fluid' src={post.image} alt="" />
+         <img className='img-post img-fluid' src={post.image} alt="" />
             <p className='contentPost'>{post.conteudo}.</p>
             
             <Link to={"/post/" + post.id} > 
@@ -72,7 +59,7 @@ const Home = () => {
 <button className='btnOpen col-md-3'>Ver conteúdo</button></Link>            
 
             </div>
-            <div className='cardBottom'>   
+            <div className='card-bottom'>   
                     <p className='card-bottom-calendar'><FaCalendarAlt/>
                     <b>{post.created_at} </b></p></div>
              </div>
