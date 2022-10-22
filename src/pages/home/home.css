@@ -1,26 +1,33 @@
 body{
-  background-color: rgb(255, 255, 255);
-  font-family:cursive;
-  background-image: radial-gradient(circle at 56.16% 120.44%, #bd5f42 0, #b65646 8.33%, #ab4c47 16.67%, #9b4146 25%, #883642 33.33%, #722b3c 41.67%, #591f32 50%, #411427 58.33%, #2d0b1d 66.67%, #1f0013 75%, #110007 83.33%, #000000 91.67%, #000000 100%);  
-
+    background-color: rgb(255, 255, 255);
+    font-family:cursive;
+    background-image: radial-gradient(circle at 56.16% 120.44%, #bd5f42 0, #b65646 8.33%, #ab4c47 16.67%, #9b4146 25%, #883642 33.33%, #722b3c 41.67%, #591f32 50%, #411427 58.33%, #2d0b1d 66.67%, #1f0013 75%, #110007 83.33%, #000000 91.67%, #000000 100%);  
+  
+  }
+  .posts{
+    box-shadow: 4px  25px 12px rgba(0, 11, 12, 0.479);
+    text-align: start;
+    font-size: larger;
+    margin-bottom:40px;
+    cursor: pointer; 
+} 
+.card-top-titulo, .card-top-autor{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-left: 15px;
 }
-/* .Post{
-    display: flex;
 
-
-} */
-
-.post-div{
- margin-left: 80px;
+.cardBody{
+    color: rgb(0, 165, 115);
 }
 .contentPost{
     color: rgb(255, 255, 255);
     max-width: 40ch;
     overflow: hidden;
     text-overflow: ellipsis;
-    
     white-space: nowrap;
 }
+
 .imgPost{
     width: 240px;
     height: 140px;
@@ -28,68 +35,48 @@ body{
     margin: 5px 15px 15px 10px ;
 
 }
-.posts{
-    box-shadow: 4px  25px 12px rgba(0, 11, 12, 0.479);
-    text-align: start;
-    width: 750px;
-    font-size: larger;
-    margin-bottom:40px;
-    cursor: pointer;
-}
 .posts:hover{
     transition-duration:  1s;
-
     filter: brightness(128%);
-    width: 770px;
-     animation: bounce 2s;
+    width: 780px;
+    animation: bounce 2s;
+    }
 
-
-}
 .btnOpen{
-    margin-left: 270px;
-    border: solid 2px white;
-    background-color: rgba(255, 255, 255, 0);
-    color: #ffffff;
-    width: 200px;
-    height: 30px;
-    cursor: pointer;
+        margin-left: 250px;
+        border: solid 2px white;
+        background-color: rgba(255, 255, 255, 0);
+        color: #ffffff;
+        cursor: pointer;
+
 }
+
 .btnOpen:hover{
     font-size: 17px;
     color: black;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.993);
-
 }
 
-.card-top-titulo{
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    margin-left: 15px;
+.cardBottom  {
+    margin-left: 10px;
+    padding-bottom: 10px ;
 
 }
-
-.cardBody{
-    color: rgb(0, 165, 115);
-}
-
-.cardBottom{
-    padding-bottom: 5px ;
-}
-
-.cardBottom * {
-    margin-left: 10px ;
-}
-
 .title{
     text-transform: uppercase;
     color: rgb(255, 255, 255);
-    font-size: 40px;
     font-family: 'Space Mono', cursive;
 }
-.card-bottom-calendar{
+.card-bottom-calendar * {
+    padding-left: 4px;
     color: rgb(255, 255, 255);
 }
+
+
+
+
+
 
 @keyframes bounce {
     0%, 20%, 60%, 100% {
@@ -105,3 +92,15 @@ body{
       transform: translateY(-10px);
     }
   }
+
+
+  @media screen and (max-width: 1000px) {
+    .btnOpen{
+        margin-left: unset;
+    }
+
+.posts:hover{
+   all: unset;
+    }
+
+}

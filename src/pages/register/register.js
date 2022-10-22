@@ -71,15 +71,17 @@ if(responseJson.erro){
 
   return (
 
-    <div className='registerBackground'>
-<Navbar url={url}/>
 
-<div className='register-div'>
+    <div className="registerBackground">
+      <Navbar url={url}/>
+    <div className='container'>
+
+<div className='register-div col-md-12'>
 <div className={status.type === 'erro' ? "errResponse" : status.type === 'sucess' ? "sucResponse" : null}>
 {status.type === 'erro' ? <p> {status.mensagem}</p> : status.type === 'sucess' ? <p> {status.mensagem}</p>: null}
 </div>
 
-<form className='form-register'>  
+<form className='form-register col-md-4'>  
 
 <h1 className='RegisterTitle'>Registrar-se</h1>
 
@@ -112,7 +114,7 @@ if(responseJson.erro){
 </div>
 
 
-
+</div>
     </div>
   )
 }

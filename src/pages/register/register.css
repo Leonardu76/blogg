@@ -25,10 +25,7 @@
 
     margin: auto;}
     
-.register-div {
-    width: auto;
-    margin-top: 100px;
-}
+
 .RegisterTitle{
     font-family:'Times New Roman', Times, serif;
     margin-left: 25px;
@@ -41,7 +38,7 @@
     background-color: rgba(12, 1, 1, 0.651);
     box-shadow: 42px 31px 25px 12px rgba(133, 5, 5, 0.363);
     margin: auto;
-    width: 350px;
+    /* width: 350px; */
     flex-direction: column;
     display: flex;
 

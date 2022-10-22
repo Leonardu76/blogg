@@ -40,8 +40,8 @@ const PostsByCategoria = () => {
         }
 
    useEffect(() => {
-    GetPostsByCat();
-   },[])
+    GetPostsByCat()
+   })
 
     const url = 'home'
 
