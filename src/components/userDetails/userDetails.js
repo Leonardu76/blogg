@@ -2,9 +2,7 @@ import React from 'react'
 import './userDetails.css'
 import {useEffect} from 'react'
 import  { useState } from 'react'
-import { Link } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.css';
-import Col from 'react-bootstrap/Col';
 
 
 
@@ -37,9 +35,8 @@ const UserDetails = (props) => {
 
    useEffect(() => {
     GetUser();
-      },[])
+      })
 
-console.log(user)
 
     return (
         <div>

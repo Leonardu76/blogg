@@ -43,7 +43,6 @@ const Post = () => {
     GetPost();
    })
    const url = 'home'
-   const page = 'post'
    const id_user = post.id_user
     return (
         <div>

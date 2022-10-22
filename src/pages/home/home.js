@@ -58,7 +58,7 @@ const Home = () => {
     <div className='posts'>
 
         <div>
-            <h2 className='card-top-titulo'>{post.titulo}</h2> <hr />
+            <h2 className='card-top-titulo'>{post.titulo}</h2> 
             <b className='card-top-autor'>De: {post.autor}</b>
         </div>
 
@@ -70,7 +70,6 @@ const Home = () => {
             <Link to={"/post/" + post.id} > 
 
 <button className='btnOpen col-md-3'>Ver conteúdo</button></Link>            
-<hr />
 
             </div>
             <div className='cardBottom'>   
