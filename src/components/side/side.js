@@ -3,11 +3,11 @@ import './side.css'
 import {useEffect} from 'react'
 import  { useState } from 'react'
 import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 
-const Side = (props) => {
-   const { page } = props
+const Side = () => {
 
     const [data, setData] = useState([])
     const [, setError] = useState()
@@ -41,29 +41,28 @@ const Side = (props) => {
 
 
     return (
-        <div>
-        <div className={page === 'post' ? ('card-side card-side-post') :
-       ('card-side') 
-    }
+        <div className='container'>
+ <input type="checkbox" value="1" id="checkbox_toggle_cat" />
+ <label for="checkbox_toggle_cat" class="hamburger-cat">&#9776;</label>
+        <div className= "card-side col-md-5 menu-cat " 
+    
         
         >
         <div className='card-topo'>
-                <h3 className='card-titulo'>CATEGORIAS</h3>
-                </div>
-                <hr /> 
+                <h4 className='card-titulo'>CATEGORIAS</h4>
+        </div>
+        <hr /> 
 
         {Object.values(data).map(categoria => (
 
 <>
 
-<Link to={"/categoria/" + categoria.id} >
+<Link to={"/categoria/" + categoria.id}  style={{ textDecoration: "none"}}>
 
-
-                <div className='card-body'> 
-                    
-                      <p>{categoria.categoria}</p>
-                      <hr /> 
-                    </div>
+                <div className='card-body' > 
+                    <p className='categoria' >{categoria.categoria}</p>
+                    <hr /> 
+                </div>
 
                     <div className='card-bottom'>
                     
@@ -74,6 +73,7 @@ const Side = (props) => {
         ))}
 
         </div>
+        
         </div>
    )
 }

@@ -5,14 +5,15 @@ import {useEffect} from 'react'
 import  { useState } from 'react'
 import { useParams } from "react-router-dom"
 import { FaCalendarAlt } from 'react-icons/fa';
-import Side from '../../components/side/side'
+import User from '../../components/userDetails/userDetails'
+
 
 
 
 const Post = () => {
     // const [data, setData] = useState([])
     // const [postagens, setPostagens] = useState([])
-    const [data, setData] = useState([])
+    const [post, setPost] = useState([])
     const [, setError] = useState()
     const { id } = useParams()
 
@@ -28,9 +29,9 @@ const Post = () => {
         }
             throw response;
         })
-         .then(data => {
+         .then(post => {
 
-            setData(data)
+            setPost(post.data)
          })
         .catch(error => {
             console.error("Error fetcj data: ", error)
@@ -40,21 +41,25 @@ const Post = () => {
 
    useEffect(() => {
     GetPost();
-   },[])
+   })
    const url = 'home'
    const page = 'post'
-
+   const id_user = post.id_user
     return (
         <div>
+
             <Navbar  url={url}/>
             {/* <h1 className='title'>Posts da categoria:{categoria}</h1> */}
 
-                     {Object.values(data).map(post => (
+                     {/* {Object.values(data).map(post => ( */}
+
 <div className='post'>
-<aside className='sider'>
-        <Side page={page}/>
+<aside className='sider col-md-8'>
+    
+        <User id_user={id_user}/>
 
         </aside>
+
     <h1 className='post-top-titulo'>{post.titulo}</h1> 
     <img className='postImage' src={post.image} alt="" />
 
@@ -73,10 +78,9 @@ const Post = () => {
 
 
             </div>
-        
-              )
-             )} 
 
+              {/* ) */}
+             {/* )}  */}
         </div>
       
 

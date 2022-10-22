@@ -4,6 +4,7 @@ import React from 'react'
 import Register from './pages/register/register'
 import PostsByCategoria from './pages/PostsByCategoria/PostsByCategoria'
 import Post from './pages/post/post'
+// import UserDetails from './components/userDetails/userDetails'
 import {GetUsuarios} from './components/api/Api'
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route element={<GetUsuarios />} path="/api"/>
         <Route element={<PostsByCategoria />} path="/categoria/:id"/>
         <Route element={<Post />} path="/post/:id"/>
+        {/* <Route element={<UserDetails />} path="/user"/> */}
         
           <Route path='*' element={<div><h1>Page not found</h1>
           </div>} />

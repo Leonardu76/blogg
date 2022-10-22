@@ -1,12 +1,13 @@
-import './login.css'
 import React, { useState } from "react";
+import './login.css'
+
 // import {useEffect} from 'react'
 
 import Navbar from '../../components/navbar/navbar'
 
 import { FaFacebook, FaLinkedin, FaGoogle } from 'react-icons/fa';
 
-const login = () => {
+const Login = () => {
   const url = 'login'
   const [data] = useState([])
   
@@ -83,17 +84,20 @@ const login = () => {
 
 
   return (
-    <div className='loginBackground'>
-          <Navbar url={url}/>
+
+    <div className=" loginBackground">
+    <Navbar url={url}/>
+
+    <div className='container'>
           {/* <div className={status.type === 'erro' ? "errResponse" : status.type === 'sucess' ? "sucResponse" : null}>
 {status.type === 'erro' ? <p> {status.mensagem}</p> : status.type === 'sucess' ? <p> {alert("Eu sou um alert!")}</p>: null}
 </div> */}
 
 
-    <div className='Login-div'>
+    <div className='login-div col-md-12'>
 
-     <form className='form-login' onSubmit={GetUser}>  
-     <h1 className='Logintitle'>Login</h1>
+     <form className='form-login col-md-4' onSubmit={GetUser}>  
+     <h1 className='login-title'>Login</h1>
  {data}
     <label><b>Email</b></label> 
     <input className='inputForm' name='email' type="email" onChange={onChangeHandlerEmail} />
@@ -120,7 +124,8 @@ const login = () => {
 
 
     </div>
+    </div>
   )
 }
 
-export default login
+export default Login

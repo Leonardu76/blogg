@@ -2,14 +2,16 @@ import React from 'react'
 import Navbar from '../../components/navbar/navbar'
 import Side from '../../components/side/side'
 import { Link } from "react-router-dom"
-
 import './home.css'
 import { FaCalendarAlt } from 'react-icons/fa';
 import {useEffect} from 'react'
 import  { useState } from 'react'
 
 
-const home = () => {
+
+
+
+const Home = () => {
     const [data, setData] = useState([])
     const [, setError] = useState()
 
@@ -38,52 +40,54 @@ const home = () => {
 
     const url = 'home'
 
-    console.log(Object.values(data))
 
     return (
-        <div>
+        <div >
             <Navbar  url={url}/>
-            <h1 className='title'>Todas publicações</h1>
-
-        <div className='post-div'>
-              <aside className='sider'>
-        <Side/>
-
+            <div className='container'>
+        <h1 className='title'>Todas publicações</h1>
+        <div className='post-div col-md-8'>
+        <aside className='sider'>
+ 
+         <Side/>
         </aside>
-        {/* {data.map((post) => */}
+
              {Object.values(data).map(post => ( 
 
-//    <div className='Post'>
-        
+
     <div className='posts'>
 
-        <div className='cardTop'>
-            <b className='card-top-titulo'>{post.titulo}</b> <hr />
-            <b className='card-top-titulo'>De: {post.autor}</b>
-            </div>
+        <div>
+            <h2 className='card-top-titulo'>{post.titulo}</h2> <hr />
+            <b className='card-top-autor'>De: {post.autor}</b>
+        </div>
 
         <div className='cardBody'> 
 
-         <img className='imgPost' src={post.image} alt="" />
+         <img className='imgPost img-fluid' src={post.image} alt="" />
             <p className='contentPost'>{post.conteudo}.</p>
-          
+            
             <Link to={"/post/" + post.id} > 
 
-<button className='btnOpen'>Ver conteúdo</button></Link>            <hr />
+<button className='btnOpen col-md-3'>Ver conteúdo</button></Link>            
+<hr />
+
             </div>
             <div className='cardBottom'>   
-                    <p className='card-bottom-calendar'><FaCalendarAlt/><b>{post.created_at} </b></p></div>
+                    <p className='card-bottom-calendar'><FaCalendarAlt/>
+                    <b>{post.created_at} </b></p></div>
              </div>
+
 
 ))}
 
 
 
         </div>
-      
+        </div>
         </div>
 
     )
 }
 
-export default home
+export default Home
