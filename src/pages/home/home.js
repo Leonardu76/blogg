@@ -20,11 +20,11 @@ const Home = () => {
             
         }
     }
-
    useEffect(() => {
     Posts();
       },[])
     const url = 'home'
+    console.log(data)
 
 
     return (
