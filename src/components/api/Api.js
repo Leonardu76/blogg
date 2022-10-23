@@ -7,7 +7,7 @@ export const GetUsuarios  = async () => {
     // const [data, setData] = useState
 
 
-    fetch("https://blogg-api.000webhostapp.com")
+    fetch("http://127.0.0.1:8000/api/usuarios/")
     .then((response) => response.json())
     .then((responseJson) => (
         console.log(responseJson)
@@ -18,7 +18,7 @@ export const GetUsuarios  = async () => {
     export const GetPosts  = async () => {
     
         try {
-            let url = "https://lavapi.000webhostapp.com/api/posts"
+            let url = "http://127.0.0.1:8000/api/posts"
             const response = await fetch(url)
             return await response.json()
         
@@ -32,7 +32,7 @@ export const GetUsuarios  = async () => {
     
     
         try {
-            let url = "https://lavapi.000webhostapp.com/api/categorias"
+            let url = "http://127.0.0.1:8000/api/categorias"
             const response = await fetch(url)
             return await response.json()
         
@@ -44,7 +44,7 @@ export const GetUsuarios  = async () => {
    export const GetPostsByCat  = async (id) => {
     
         try {
-            let url = `https://lavapi.000webhostapp.com/api/post/${id}/categoria`
+            let url = `http://127.0.0.1:8000/api/post/${id}/categoria`
             const response = await fetch(url)
             return await response.json()
         
@@ -56,7 +56,7 @@ export const GetUsuarios  = async () => {
      export  const GetUser  = async (id) => {
     
             try {
-                let url = `https://lavapi.000webhostapp.com/api/usuarios/${id}`
+                let url = `http://127.0.0.1:8000/api/usuarios/${id}`
                 const response = await fetch(url)
                 return await response.json()
             
@@ -69,7 +69,7 @@ export const GetUsuarios  = async () => {
          export     const GetPost = async (id) => {
 
                 try {
-                    let url = `https://lavapi.000webhostapp.com/api/posts/${id}`
+                    let url = `http://127.0.0.1:8000/api/posts/${id}`
                     const response = await fetch(url)
                     return await response.json()
                 
@@ -78,3 +78,4 @@ export const GetUsuarios  = async () => {
                 }
                   }
             
+                  

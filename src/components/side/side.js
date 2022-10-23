@@ -13,7 +13,7 @@ const Side = () => {
 
         try {
           const result = await GetCategorias()
-          setData(result)
+          setData(result.data)
     
         } catch (error) {
           

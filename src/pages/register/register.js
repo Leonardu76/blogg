@@ -37,7 +37,7 @@ const Register = () => {
     // console.log(nome, email, senha)
     e.preventDefault()
 
-    await fetch("https://bloggphp.herokuapp.com/cadastrar.php/", {
+    await fetch("http://127.0.0.1:8000/api/usuarios", {
       method: 'POST',
       headers: {
     'Content-Type': 'application/json'
@@ -49,13 +49,13 @@ const Register = () => {
 if(responseJson.erro){
   setStatus({
     type:'erro', 
-    mensagem: responseJson.messagem
+    mensagem: responseJson.errors
    })
 
 }else{
   setStatus({
     type:'sucess', 
-    mensagem: responseJson.messagem
+    mensagem: 'Usuário  cadastrado com sucesso!'
    })
 
 }

@@ -10,6 +10,7 @@ body{
     font-size: larger;
     margin-bottom:40px;
     cursor: pointer; 
+    height: 220px;
 } 
 
 .card-top-titulo{
