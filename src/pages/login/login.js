@@ -9,10 +9,10 @@ import { FaFacebook, FaLinkedin, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
   const url = 'login'
-  const [data] = useState([])
+  // const [data] = useState([])
   
-  // const [email, setEmail] = useState()
-  // const [senha, setSenha] = useState()
+  const [email, setEmail] = useState()
+  const [senha, setSenha] = useState()
   // const [status, setStatus] = useState({
   //   type: '',
   //   mensagem: ''
@@ -82,7 +82,7 @@ const Login = () => {
 
 
 
-
+console.log(email,senha)
   return (
 
     <div className=" loginBackground">
@@ -98,13 +98,12 @@ const Login = () => {
 
      <form className='form-login col-md-4' onSubmit={GetUser}>  
      <h1 className='login-title'>Login</h1>
- {data}
     <label><b>Email</b></label> 
     <input className='inputForm' name='email' type="email" onChange={onChangeHandlerEmail} />
 
     <label><b>Senha</b></label> 
     <input className='inputForm' type="password" name='password'  onChange={onChangeHandlerSenha}/>
-
+    
     <button className='btnLogin'  >Login</button>
     <p className='text'>Login com redes sociais</p>
 
