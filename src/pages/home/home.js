@@ -15,7 +15,7 @@ const Home = () => {
     {
         try {
           const result = await GetPosts()
-          setData(result)
+          setData(result.data)
         } catch (error) {
             
         }
@@ -24,7 +24,6 @@ const Home = () => {
    useEffect(() => {
     Posts();
       },[])
-
     const url = 'home'
 
 

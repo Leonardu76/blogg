@@ -21,7 +21,7 @@ const Post = () => {
 
         try {
           const result = await GetPost(id)
-          setPost(result.data)
+          setPost(result)
     
         } catch (error) {
           
@@ -34,17 +34,17 @@ const Post = () => {
  
    
     const url = 'home'
-    // const id_user = post.id_user
+    const idd = post.id_user
     return (
         <div>
 
             <Navbar url={url} />
 
             <div className='container'>
-                <div className='post col-md-6'>
+                <div className='post col-md-8'>
 
-                    <aside className='sider  col-md-6'>
-                        <User id_user = {post.id_user} />
+                    <aside className='sider'>
+                        <User idd = {idd} />
                     </aside>
 
                     <h1 className='post-top-titulo'>{post.titulo}</h1>

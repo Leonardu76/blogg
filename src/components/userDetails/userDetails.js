@@ -2,50 +2,35 @@ import React from 'react'
 import './userDetails.css'
 import {useEffect} from 'react'
 import  { useState } from 'react'
-import { FaFacebook, FaInstagram, FaTwitch, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram,  FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import {GetUser} from '../../components/api/Api'
 
 
 
 const UserDetails = (props) => {
-   const { id_user } = props
+   const { idd } = props
 
     const [user, setUser] = useState([])
-    const [, setError] = useState()
 
-    const GetUser  = async () => {
-    
-      fetch(`https://lavapi.000webhostapp.com/api/usuarios/${id_user}`)
-      .then(response => {
-          if (response.ok) {
-              return response.json()
+
+    const User = async () => {
+
+      try {
+        const result = await GetUser(idd)
+        setUser(result)
+  
+      } catch (error) {
+        
       }
-          throw response;
-      })
-       .then(user => {
-        setUser(user.data)
-       })
-      .catch(error => {
-          console.error("Error fetcj data: ", error)
-          setError(error);
-       } ) 
-            
-          
-          
-        }
 
+    }
    useEffect(() => {
-    GetUser();
-      })
-
+    User()
+  })
+console.log(user)
 
     return (
         <div>
-
-
-        
-
-
-
 
 <div className='container'>
   <div className='user-details col-md-12'>
@@ -66,10 +51,15 @@ const UserDetails = (props) => {
   </div>
 
   <div className='user-card-footer'>
-  <span className='user-rede insta'><FaInstagram/></span>
-  <span className='user-rede face'><FaFacebook/></span>
-  <span className='user-rede twitter'><FaTwitter/></span>
-  <span className='user-rede'><FaTwitch/></span>
+  <a target="_blank" rel="noreferrer" href={user.insta}><span className='user-rede insta'><FaInstagram/></span></a>
+  
+  
+  <a target="_blank" rel="noreferrer" href={user.face}><span className='user-rede face'><FaFacebook/></span></a>
+
+  <a target="_blank" rel="noreferrer" href={user.twitter}><span className='user-rede twitter'><FaTwitter/></span></a>
+
+  <a target="_blank" rel="noreferrer" href={user.linkdin}><span className='user-rede'><FaLinkedinIn/></span></a>
+
   </div>
 
 

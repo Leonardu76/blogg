@@ -20,7 +20,7 @@ const PostsByCategoria = () => {
 
     try {
       const result = await GetPostsByCat(id)
-      setPostagens(result.data.categoria_de)
+      setPostagens(result.data.postagens)
       setCategoria(result.data.categoria)
 
     } catch (error) {
