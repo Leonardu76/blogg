@@ -8,7 +8,7 @@
     border-bottom: solid 1px white;
     border-top: solid 1px white;    margin-top: 2px;
     color: white;
-    background-color: rgba(199, 18, 18, 0.267);
+    background-color: rgba(22, 189, 161, 0.185);
     cursor: pointer;
 }
 
@@ -16,7 +16,7 @@
     border-bottom: solid 1px white;
     border-top: solid 1px white;
     color: white;
-    background-color: rgba(199, 18, 18, 0.267);
+    background-color: rgba(22, 189, 161, 0.185);
     margin-left: 20px;
 }
 
@@ -26,7 +26,7 @@
     margin-left: 40px;
     margin-top: 5px;
     color: rgb(255, 255, 255);
-    background-color: rgba(199, 18, 18, 0.267);
+    background-color: rgba(22, 189, 161, 0.185);
     cursor: pointer;
     border: rgb(255, 255, 255) 3px groove;
     border-left: 0;
@@ -35,7 +35,7 @@
 }
 
 .navbar{
-    background-color: rgba(100, 7, 7, 0.473);
+    background-color: rgba(7, 94, 100, 0.514);
 }
 
 .logo {

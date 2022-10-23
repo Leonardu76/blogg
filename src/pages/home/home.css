@@ -1,9 +1,29 @@
 body{
-    background-color: rgb(255, 255, 255);
-    font-family:cursive;
-    background-image: radial-gradient(circle at 56.16% 120.44%, #bd5f42 0, #b65646 8.33%, #ab4c47 16.67%, #9b4146 25%, #883642 33.33%, #722b3c 41.67%, #591f32 50%, #411427 58.33%, #2d0b1d 66.67%, #1f0013 75%, #110007 83.33%, #000000 91.67%, #000000 100%);  
+    background: rgb(37,224,209);
+    background: linear-gradient(74deg,  rgba(37,224,209,1), rgba(73,84,83,1), rgba(1,222,208,1) );
+    background-size: 200% 250%;
+    animation: colors 25s ease infinite;
+   }
+
+
+   @keyframes colors {
+     0% {
+       background-position: 0% 50%;
+     }
+     50% {
+       background-position: 100% 50%;
+     }
+     100% {
+       background-position: 0% 50%;
+     }
+   }
   
-  }
+
+
+
+
+
+  
   .posts{
     box-shadow: 4px  25px 12px rgba(0, 11, 12, 0.479);
     text-align: start;

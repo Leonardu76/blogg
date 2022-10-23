@@ -1,14 +1,15 @@
 .user-name{
-    color: red;
     text-transform: uppercase;
     margin-left: 40px;
     font-size: 20px;
 }
 
 .user-details{
+    position: fixed;
+    color: white;
     width: 350px;
     margin-left: 800px;
-    background-color: aqua;
+    background-color: rgba(11, 191, 197, 0.329);
 }
 .user-image{
     background-color: red;
@@ -18,7 +19,6 @@
 }
 
 .user-email{
-    color: red;
     word-wrap: break-word;
 
 }
@@ -45,6 +45,8 @@
         margin-left: unset;
         margin-bottom: 100px;
         height: 250px;
+        position: unset;
+
     }
     .post-top-titulo{
         margin-top:350px;
