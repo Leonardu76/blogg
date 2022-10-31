@@ -65,7 +65,7 @@ input[type=checkbox]{
     margin-right: unset;
     display:none;
     position: absolute;
-    background-color:rgb(12, 11, 11);
+    background: linear-gradient(54deg,  rgb(37, 224, 208), rgb(73, 84, 83), rgb(1, 222, 207) );
     right: 15px;
     left: 25px;
     text-align: center;

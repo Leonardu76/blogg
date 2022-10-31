@@ -1,7 +1,7 @@
 body{
     background: rgb(37,224,209);
     background: linear-gradient(74deg,  rgba(37,224,209,1), rgba(73,84,83,1), rgba(1,222,208,1) );
-    background-size: 200% 250%;
+    background-size: 200% 350%;
     animation: colors 25s ease infinite;
    }
 

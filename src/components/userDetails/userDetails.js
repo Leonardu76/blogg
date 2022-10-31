@@ -4,6 +4,7 @@ import {useEffect} from 'react'
 import  { useState } from 'react'
 import { FaFacebook, FaInstagram,  FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import {GetUser} from '../../components/api/Api'
+import { Link } from "react-router-dom"
 
 
 
@@ -27,13 +28,15 @@ const UserDetails = (props) => {
    useEffect(() => {
     User()
   })
-console.log(user)
+console.log(user.id)
 
     return (
         <div>
 
 <div className='container'>
+
   <div className='user-details col-md-12'>
+  <Link to={"/profile/" + user.id} >     
 
     <div className='user-card-top nav'>
     <img className='user-image img-fluid' src={user.image} alt="" />
@@ -49,7 +52,7 @@ console.log(user)
     dicta molestias a eius sint quis iure
     magni inventore maiores sit?
   </div>
-
+  </Link>
   <div className='user-card-footer'>
   <a target="_blank" rel="noreferrer" href={user.insta}><span className='user-rede insta'><FaInstagram/></span></a>
   
@@ -61,11 +64,9 @@ console.log(user)
   <a target="_blank" rel="noreferrer" href={user.linkdin}><span className='user-rede'><FaLinkedinIn/></span></a>
 
   </div>
-
-
-
-
   </div>
+   
+  
 </div>
               
 

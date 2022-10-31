@@ -8,7 +8,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background:url(https://static.vecteezy.com/system/resources/previews/005/099/465/large_2x/cup-coffee-with-laptop-cell-phone-diary-with-pen-white-background-free-photo.jpg);
+    background:url(https://img.freepik.com/fotos-premium/marco-esquina-hojas-ramas-eucalipto-verde-sobre-fondo-blanco-composicion-floral-imagen-plana-stock-estilo-femenino-vista-superior-copie-espacio_370312-168.jpg?w=2000);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -39,7 +39,7 @@
 }
 
 .form-register {
-    background-color: rgba(12, 1, 1, 0.651);
+    background: linear-gradient(54deg,  rgba(37, 224, 208, 0.822), rgba(73, 84, 83, 0.705), rgba(1, 222, 207, 0.945) );
     box-shadow: 42px 31px 25px 12px rgba(133, 5, 5, 0.363);
     margin: auto;
     /* width: 350px; */
@@ -86,9 +86,9 @@
     height: 30px;
     width: auto;
     margin: 15px 25px 0;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
-    background-color: rgba(184, 9, 9, 0.61);
+    background-color: rgb(255, 255, 255);
 }
 .forget{
     margin:  15px; 
@@ -99,8 +99,8 @@
 .redesRegister {
     width: auto;
     font-size: 20px;
-    color: rgb(255, 255, 255);
-    background-color: rgba(184, 9, 9, 0.61)
+    color: rgb(7, 92, 18);
+    background-color: rgb(255, 255, 255);
 }
 .redesRegister *{
     margin-left: 15px;

@@ -1,0 +1,27 @@
+.profile{
+    margin-top:80px;
+}
+
+.profile-card-footer{
+background-color: rgba(255, 255, 255, 0.712);
+/* width: 50%; */
+}
+.profile-rede{
+    font-size: 30px;
+    color: rgb(6, 78, 75);
+
+}
+.profile-top-titulo, .profile-content{
+    color: white;
+    /* margin-top: 80px; */
+
+    /* float: left; */
+
+}
+.profile-image{
+    /* margin: 80px 22px  45px; */
+    width: 40%;
+    /* float: left; */
+    border-radius: 160px;
+
+}
