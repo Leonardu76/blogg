@@ -90,7 +90,7 @@ margin-left: unset;
 }
 
 .searchDiv, .srchInput{
-    width: 100%;
+    width: 91%;
     height: 50px;
     margin-left: unset;
 }
@@ -101,9 +101,7 @@ margin-left: unset;
     border-right: 0;
 }
 .btnSrch{
-    margin-bottom: -12.2px;
-    position:relative;
-
+height: 51px;
 }
    }
 
