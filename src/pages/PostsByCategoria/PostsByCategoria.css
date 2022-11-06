@@ -2,15 +2,20 @@
 .btnOpenByCat{
     margin-left: 450px;
 }
-
+.posts-cat{
+    box-shadow: 4px  25px 12px rgba(0, 11, 12, 0.479);
+    text-align: start;
+    font-size: larger;
+    cursor: pointer; 
+    height: 220px;
+}
 .posts-cat:hover{
-
     filter: brightness(128%);
-    animation: bounce 3s;
     transition-duration:  2s;
     width: 90%;
 }
-.content-post{
+.content-post-cat{
+        text-align: start;
         color: rgb(255, 255, 255);
         overflow: hidden;
         text-overflow: ellipsis;
