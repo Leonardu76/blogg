@@ -1,27 +1,9 @@
-
-/* Largura da barra de rolagem */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-
-
-/* Cor do indicador de rolagem */
-::-webkit-scrollbar-thumb:vertical{
-    background-color: #bac0c400
-}
-
-/* Cor do indicador de rolagem - ao passar o mouse */
-::-webkit-scrollbar-thumb:vertical:hover {
-    background-color: #717171
-}
 .user-details{
 
-    overflow: scroll;
-    position: fixed;
+    position: absolute;
     color: white;
     width: 350px;
-    height: 100%;
+    height: auto;
     margin-left: 800px;
     background-color: rgba(1, 15, 15, 0.185);
 }
@@ -83,7 +65,7 @@ font-family: 'Space Mono', cursive;
     border: groove 1px  white ;
     border-left: 0px;
     border-right: 0px;
-    margin: 10px;
+    margin: 20px;
 }
 .sider-details{
     margin-left: 50px;

@@ -2,6 +2,7 @@
     margin-top: 50px;
 }
 .post-image{
+    margin-right: 80px;
     height: 440px;
 }
 .post-top-titulo, .post-top-subtitulo{
@@ -33,3 +34,14 @@
 
 } 
 
+    
+@media (max-width: 768px) {
+   
+  
+    .post-image{
+     margin-right: unset;
+
+    }
+
+     
+}

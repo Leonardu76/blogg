@@ -35,7 +35,8 @@ function App() {
         <Route element={<User />} path="/profile/:id"/>
         {/* <Route element={<UserDetails />} path="/user"/> */}
         
-          <Route path='*' element={<div><h1>Page not found</h1>
+          <Route path='*' element={<div><h1>Página não encontrada!!</h1>
+          <img src="https://media.tenor.com/IHdlTRsmcS4AAAAM/404.gif" alt="" />
           </div>} />
 
 
