@@ -2,11 +2,9 @@ import React from 'react'
 import Navbar from '../../components/navbar/navbar'
 import './PostsByCategoria.css'
 import { FaCalendarAlt } from 'react-icons/fa';
-import {useEffect} from 'react'
-import  { useState } from 'react'
-import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
-import { GetPostsByCat } from '../../components/api/Api'
+import {useEffect, useState} from 'react'
+import { Link, useParams } from "react-router-dom"
+import { api } from '../../components/api/Api'
 
 
 
@@ -16,23 +14,21 @@ const PostsByCategoria = () => {
     const { id } = useParams()
     
     
-   const Post = async () => {
+   const Post = async (id) => {
+    await api.get(`post/${id}/categoria`).then((response) => setCategoria(response.data.data.categoria))
+    await api.get(`post/${id}/categoria`).then((response) => setPostagens(response.data.data.postagens))
 
-    try {
-      const result = await GetPostsByCat(id)
-      setPostagens(result.data.postagens)
-      setCategoria(result.data.categoria)
+   }
+   useEffect(() => {
+    if(id){
+        Post(+id)
+    }
+  })
 
-    } catch (error) {
-      
-    }}
-
-useEffect(() => {
-Post()
-})
-
-
-    const url = 'home'
+//   console.log(postagens)
+//   console.log(id)
+  console.log(categoria)
+  const url = 'home'
 
     return (
         <div>
@@ -40,10 +36,10 @@ Post()
 
 <div className='container'>
 <h1 className='title-cat title'>categoria:{categoria}</h1>
+{postagens && postagens.map((post) => (
 
-{Object.values(postagens).map(post => (
 
-<div className='posts-cat posts col-md-12'>
+<div className='posts-cat  col-md-12'>
 
 <div>
         <h2 className='card-top-titulo'>{post.titulo}</h2> 
@@ -53,7 +49,7 @@ Post()
 <div className='card-body'> 
 
  <img className='img-post' src={post.image} alt="" />
-    <p className='content-post'>{post.conteudo}.</p>
+    <p className='content-post-cat'>{post.conteudo}.</p>
 
     <Link to={"/post/" + post.id} > 
 

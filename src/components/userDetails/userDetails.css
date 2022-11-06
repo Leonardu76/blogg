@@ -1,54 +1,114 @@
-.user-name{
-    text-transform: uppercase;
-    margin-left: 40px;
-    font-size: 20px;
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
+
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical{
+    background-color: #bac0c400
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #717171
+}
 .user-details{
+
+    overflow: scroll;
     position: fixed;
     color: white;
     width: 350px;
+    height: 100%;
     margin-left: 800px;
-    background-color: rgba(11, 191, 197, 0.329);
+    background-color: rgba(1, 15, 15, 0.185);
 }
 .user-image{
-    background-color: red;
+    margin-top: 50px;
     border-radius: 40px;
-    width: 50px;
-    flex-direction: column;
+    width: 80px;
+    margin-right: 250px;
 }
 
-.user-email{
+.user-email, .user-sobre {
     word-wrap: break-word;
+text-align: start;}
 
+.user-name{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-right: 250px;
 }
+
 .user-card-footer{
     margin-top: 5px;
     margin-bottom: 8px;
-    background-color:rgb(247, 244, 250);
 }
 .user-rede{
+ cursor:pointer;
  padding-bottom: 5px;
  font-size: 22px;
  margin-left: 10px;
- color: rgb(7, 92, 18);
+ color: rgb(255, 255, 255);
+}
+.face:hover, .linkdin:hover{
+    color: rgba(13, 32, 206, 0.801);
+   }
+.twitter:hover{
+    color: rgba(23, 184, 196, 0.801);
+}
+.insta:hover{
+    color: rgba(135, 10, 160, 0.801);
 }
 
+.titulo-posts-relacioned{
+text-align: start;
+text-transform: uppercase;
+font-size: 15px;
 
+margin-left: 13px;
+font-family: 'Space Mono', cursive;
+}
+.title-side{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+.card-bottom-relacioned{
+    border: groove 1px  white ;
+    border-left: 0px;
+    border-right: 0px;
+    margin: 10px;
+}
+.sider-details{
+    margin-left: 50px;
+}
+.content-posts-relacioned{
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
 
 @media (max-width: 768px) {
    
   
     .user-details{
         margin-left: unset;
-        margin-bottom: 100px;
-        height: 250px;
+        /* margin-bottom: 100px; */
+        height: auto;
+        overflow:unset;
         position: unset;
 
     }
-    .post-top-titulo{
-        margin-top:350px;
-    }
-
+.sider-details{
+    all: unset;
+}
      
 }

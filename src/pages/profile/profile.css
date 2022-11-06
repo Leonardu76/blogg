@@ -1,27 +1,125 @@
-.profile{
-    margin-top:80px;
+
+  .posts-profile{
+    box-shadow: 4px  25px 12px rgba(0, 11, 12, 0.479);
+    text-align: start;
+    font-size: larger;
+    margin-bottom:40px;
+    cursor: pointer; 
+    height: 220px;
+} 
+
+.card-top-titulo-profile{
+    font-size: 23px;
+    border: groove 2px  white ;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+}
+.card-top-autor-profile{
+    font-size: 17px;
+
+}
+.card-top-titulo-profile, .card-top-autor-profile{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-left: 15px;
 }
 
-.profile-card-footer{
-background-color: rgba(255, 255, 255, 0.712);
-/* width: 50%; */
+.card-body{
+    color: rgb(0, 165, 115);
+    
 }
-.profile-rede{
-    font-size: 30px;
-    color: rgb(6, 78, 75);
+.contentPost-profile{
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.post-div-profile{
+    margin-top: 60px;
+}
+.img-post-profile{
+    width: 240px;
+    height: 140px;
+    float: left;
+    margin: 5px 15px 15px 10px ;
 
 }
-.profile-top-titulo, .profile-content{
-    color: white;
-    /* margin-top: 80px; */
+.posts-profile:hover{
+    transition-duration:  1s;
+    filter: brightness(128%);
+    animation: bounce 2s;
+    }
 
-    /* float: left; */
+.btnOpen{
+    margin-left: 270px;
+    border: 2px solid #fff;
+    background-color: hsla(0,0%,100%,0);
+    color: #fff;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 15px;
 
 }
-.profile-image{
-    /* margin: 80px 22px  45px; */
-    width: 40%;
-    /* float: left; */
-    border-radius: 160px;
+
+.btnOpen:hover{
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.993);
+}
+
+.card-bottom-profile  {
+    margin-top: 8px;
+    border: groove 2px  white ;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    padding-bottom: 10px ;
+
+}
+.title-profile{
+    text-align: start;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-family: 'Space Mono', cursive;
+    margin-bottom: 40px;
+}
+.card-bottom-calendar-profile * {
+    padding-left: 4px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .btnOpen{
+        margin-left: unset;
+        width: auto;
+
+    }
+
+
 
 }

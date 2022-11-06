@@ -1,6 +1,5 @@
 .card-topo{
     background-color:   rgb(255, 255, 255);
-    color: black(255, 255, 255);
     border: groove 2px  white ;
     border-top: 0px;
     border-left: 0px;
@@ -10,6 +9,8 @@
 }
 .card-titulo{
     font-size: 21px;
+    word-wrap: break-word;
+
     text-align: center;
 }
 
@@ -38,8 +39,9 @@
 .card-side{
     margin-left: 800px;
     box-shadow: 4px 31px 25px 12px rgba(0, 11, 12, 0.479);
-    
+    position:fixed;
    }
+
 
 .sider{
     height: 0;
@@ -85,6 +87,7 @@ input[type=checkbox]{
         display: block;
     }
     .sider{
+        
         margin-bottom: 100px;
 
     }

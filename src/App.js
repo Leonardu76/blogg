@@ -5,8 +5,7 @@ import Register from './pages/register/register'
 import PostsByCategoria from './pages/PostsByCategoria/PostsByCategoria'
 import Post from './pages/post/post'
 import User from './pages/profile/profile'
-// import UserDetails from './components/userDetails/userDetails'
-import {GetUsuarios} from './components/api/Api'
+// import {GetUsuarios} from './components/api/Api'
 
 
 import './App.css';
@@ -30,7 +29,7 @@ function App() {
         <Route element={<Home />} path="" />
         <Route element={<Login />} path="/Login" />
         <Route element={<Register />} path="/register"/>
-        <Route element={<GetUsuarios />} path="/api"/>
+        {/* <Route element={<GetUsuarios />} path="/api"/> */}
         <Route element={<PostsByCategoria />} path="/categoria/:id"/>
         <Route element={<Post />} path="/post/:id"/>
         <Route element={<User />} path="/profile/:id"/>
