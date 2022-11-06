@@ -56,8 +56,8 @@ const PostsByCategoria = () => {
     <button className='btnOpen  col-md-4'>Ver conteúdo</button></Link>            
     </div>
     <div className='card-bottom'>   
-                    <p className='card-bottom-calendar'><FaCalendarAlt/>
-                    <b>{post.created_at} </b></p></div>
+    <p className='card-bottom-calendar'><FaCalendarAlt /><b>{new Date(post.created_at).toDateString()}</b></p>
+                    </div>
              </div>
               )
              )} 
